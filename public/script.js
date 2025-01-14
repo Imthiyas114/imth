@@ -15,7 +15,16 @@ input.addEventListener('keypress', function (e) {
 
 socket.on('chat message', function (msg) {
     const item = document.createElement('li');
-    item.textContent = msg;
+    if (msg.includes('Amina')) {
+        const img = document.createElement('img');
+        img.src = 'Screenshot 2024-04-25 232941.png';
+        img.alt = 'Amina Image';
+        img.style.maxWidth = '100%';
+        item.appendChild(img);
+    } else {
+        item.textContent = msg;
+    }
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
 });
+
