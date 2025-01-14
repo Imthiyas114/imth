@@ -1,5 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    color: yellow;
+}
+
+h1 {
+    margin-left: 50%;
+    color: green;
 }
 
 #messages {
