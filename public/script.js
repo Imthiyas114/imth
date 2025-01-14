@@ -1,4 +1,3 @@
-// public/script.js
 const socket = io();
 
 const input = document.getElementById('message-input');
@@ -15,21 +14,20 @@ input.addEventListener('keypress', function (e) {
 
 socket.on('chat message', function (msg) {
     const item = document.createElement('li');
-images = ['Screenshot 2024-04-25 232941.png','Screenshot 2024-10-16 033829.png']
-for(let n of images){
-if (msg.includes('Amina')) {
-        const img = document.createElement('img');
-        img.src = n
-        img.alt = 'Amina Image';
-        img.style.maxWidth = '100%';
-        item.appendChild(img);
+    const images = ['Screenshot 2024-04-25 232941.png', 'Screenshot 2024-10-16 033829.png'];
+    
+    if (msg.includes('Amina')) {
+        images.forEach(imageSrc => {
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = 'Amina Image';
+            img.style.maxWidth = '100%';
+            item.appendChild(img);
+        });
     } else {
         item.textContent = msg;
     }
+    
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
 });
-
-}
-    
-
