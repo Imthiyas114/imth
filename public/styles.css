@@ -1,4 +1,3 @@
-/* public/styles.css */
 body {
     font-family: Arial, sans-serif;
 }
@@ -20,5 +19,12 @@ body {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#messages img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
     border-radius: 4px;
 }
