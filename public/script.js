@@ -15,9 +15,11 @@ input.addEventListener('keypress', function (e) {
 
 socket.on('chat message', function (msg) {
     const item = document.createElement('li');
-    if (msg.includes('Amina')) {
+images = ['Screenshot 2024-04-25 232941.png','Screenshot 2024-10-16 033829.png']
+for(let n of images){
+if (msg.includes('Amina')) {
         const img = document.createElement('img');
-        img.src = 'Screenshot 2024-04-25 232941.png';
+        img.src = n
         img.alt = 'Amina Image';
         img.style.maxWidth = '100%';
         item.appendChild(img);
@@ -27,4 +29,7 @@ socket.on('chat message', function (msg) {
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
 });
+
+}
+    
 
