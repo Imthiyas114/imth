@@ -4,26 +4,30 @@ const input = document.getElementById('message-input');
 const messages = document.getElementById('messages');
 const cameraButton = document.getElementById('camera-button');
 
+// Handle sending messages
 input.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         e.preventDefault();
         const message = input.value.trim();
         if (message) {
-            appendMessage(message, 'sent');
+            appendMessage(message, 'sent'); // Sent message
             socket.emit('chat message', message);
             input.value = '';
         }
     }
 });
 
+// Handle receiving messages
 socket.on('chat message', function (msg) {
-    appendMessage(msg, 'received');
+    appendMessage(msg, 'received'); // Received message
 });
 
+// Handle camera button (placeholder for functionality)
 cameraButton.addEventListener('click', () => {
-    alert('Camera functionality not implemented yet.'); // Placeholder for camera functionality
+    alert('Camera functionality not implemented yet.'); // Placeholder
 });
 
+// Function to append messages to the UI
 function appendMessage(message, type) {
     const item = document.createElement('li');
     item.classList.add(type);
@@ -42,5 +46,5 @@ function appendMessage(message, type) {
     }
 
     messages.appendChild(item);
-    messages.scrollTop = messages.scrollHeight;
+    messages.scrollTop = messages.scrollHeight; // Auto-scroll to the bottom
 }
