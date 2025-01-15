@@ -12,7 +12,7 @@ h1 {
     color: green;
 }
 
-#messages {
+#messages1 {
     flex-grow: 1;
     list-style-type: none;
     margin: 0;
@@ -20,7 +20,22 @@ h1 {
     overflow-y: auto;
 }
 
-#messages li {
+#messages2 {
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+#messages1 li {
+    padding: 8px;
+    margin-bottom: 4px;
+    max-width: 70%;
+    border-radius: 4px;
+    display: inline-block;
+}
+#messages2 li {
     padding: 8px;
     margin-bottom: 4px;
     max-width: 70%;
@@ -28,18 +43,19 @@ h1 {
     display: inline-block;
 }
 
-#messages li.sent {
+#messages3 li.sent {
     background: #dcf8c6;
     text-align: right;
     margin-left: auto;
 }
 
-#messages li.received {
+#messages2 li.received {
     background: #f1f1f1;
     text-align: left;
+margin-right: auto
 }
 
-#messages img {
+#messages1 img {
     display: block;
     margin-top: 10px;
     max-width: 100%;
