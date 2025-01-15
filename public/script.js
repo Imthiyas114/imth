@@ -1,7 +1,8 @@
 const socket = io();
 
 const input = document.getElementById('message-input');
-const messages = document.getElementById('messages');
+const messages = document.getElementById('messages1');
+const messages = document.getElementById('messages2');
 const cameraButton = document.getElementById('camera-button');
 
 // Handle sending messages
