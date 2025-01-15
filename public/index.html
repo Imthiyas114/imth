@@ -1,14 +1,16 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ImaMIz Messseger</title>
+    <title>ImaMIz Messenger</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h1> Welcome ImamizMessage</h1>
+    <h1>Welcome to ImaMIz Messenger</h1>
     <ul id="messages"></ul>
-    <input id="message-input" autocomplete="off" placeholder="Type your message here..." />
+    <div id="message-input-container">
+        <input id="message-input" autocomplete="off" placeholder="Type your message here..." />
+        <button id="camera-button">&#128247;</button>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
