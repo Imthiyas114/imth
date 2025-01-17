@@ -8,9 +8,26 @@ body {
 }
 
 h1 {
-    text-align: center;
+    font-size: 2.5em; /* Default size for large screens */
     color: green;
+    text-align: center;
+    margin: 20px 0;
 }
+
+/* Smaller devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller font size for tablets */
+    }
+}
+
+/* Mobile devices (phones, 480px and up) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for phones */
+    }
+}
+
 
 #messages1 {
     flex-grow: 1;
@@ -90,3 +107,5 @@ margin-right: auto
 #camera-button:hover {
     background: darkgreen;
 }
+
+
